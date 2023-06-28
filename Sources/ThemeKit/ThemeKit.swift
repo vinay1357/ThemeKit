@@ -27,10 +27,32 @@ public extension Theme {
         let uiColor = UIColor.operationForegroundColor(theme: self)
         return Color(uiColor: uiColor)
     }
+    
+    var success: Color {
+        let uiColor = UIColor.sucessfontColor(theme: self)
+        return Color(uiColor: uiColor)
+    }
+    
+    var error: Color {
+        let uiColor = UIColor.errorfontColor(theme: self)
+        return Color(uiColor: uiColor)
+    }
 }
 
 extension UIColor {
     static func numberBackgroundColor(theme: Theme) -> UIColor {
+        let assetName = UIColor.assetName("numberBackgroundColor",
+                                          theme: theme)
+        return UIColor(named: assetName) ?? .black
+    }
+    
+    static func sucessfontColor(theme: Theme) -> UIColor {
+        let assetName = UIColor.assetName("numberBackgroundColor",
+                                          theme: theme)
+        return UIColor(named: assetName) ?? .black
+    }
+    
+    static func errorfontColor(theme: Theme) -> UIColor {
         let assetName = UIColor.assetName("numberBackgroundColor",
                                           theme: theme)
         return UIColor(named: assetName) ?? .black
