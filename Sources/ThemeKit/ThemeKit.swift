@@ -43,37 +43,37 @@ extension UIColor {
     static func numberBackgroundColor(theme: Theme) -> UIColor {
         let assetName = UIColor.assetName("numberBackgroundColor",
                                           theme: theme)
-        return UIColor(named: assetName) ?? .black
+        return UIColor(named: assetName, in: .module, compatibleWith: nil) ?? .black
     }
     
     static func sucessfontColor(theme: Theme) -> UIColor {
         let assetName = UIColor.assetName("sucess",
                                           theme: theme)
-        return UIColor(named: assetName) ?? .green
+        return UIColor(named: assetName, in: .module, compatibleWith: nil) ?? .green
     }
     
     static func errorfontColor(theme: Theme) -> UIColor {
         let assetName = UIColor.assetName("errorView",
                                           theme: theme)
-        return UIColor(named: assetName) ?? .darkGray
+        return UIColor(named: assetName, in: .module, compatibleWith: nil) ?? .darkGray
     }
     
     static func numberForegroundColor(theme: Theme) -> UIColor {
         let assetName = UIColor.assetName("numberForegroundColor",
                                           theme: theme)
-        return UIColor(named: assetName) ?? .white
+        return UIColor(named: assetName, in: .module, compatibleWith: nil) ?? .white
     }
     
     static func operationBackgroundColor(theme: Theme) -> UIColor {
         let assetName = UIColor.assetName("operationBackgroundColor",
                                           theme: theme)
-        return UIColor(named: assetName) ?? .black
+        return UIColor(named: assetName, in: .module, compatibleWith: nil) ?? .black
     }
     
     static func operationForegroundColor(theme: Theme) -> UIColor {
         let assetName = UIColor.assetName("operationForegroundColor",
                                           theme: theme)
-        return UIColor(named: assetName) ?? .white
+        return UIColor(named: assetName, in: .module, compatibleWith: nil) ?? .white
     }
     
     private static func assetName(_ name: String, theme: Theme) -> String {
