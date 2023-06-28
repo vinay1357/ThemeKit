@@ -47,15 +47,15 @@ extension UIColor {
     }
     
     static func sucessfontColor(theme: Theme) -> UIColor {
-        let assetName = UIColor.assetName("numberBackgroundColor",
+        let assetName = UIColor.assetName("sucess",
                                           theme: theme)
-        return UIColor(named: assetName) ?? .black
+        return UIColor(named: assetName) ?? .green
     }
     
     static func errorfontColor(theme: Theme) -> UIColor {
-        let assetName = UIColor.assetName("numberBackgroundColor",
+        let assetName = UIColor.assetName("error",
                                           theme: theme)
-        return UIColor(named: assetName) ?? .black
+        return UIColor(named: assetName) ?? .blue
     }
     
     static func numberForegroundColor(theme: Theme) -> UIColor {
