@@ -53,9 +53,9 @@ extension UIColor {
     }
     
     static func errorfontColor(theme: Theme) -> UIColor {
-        let assetName = UIColor.assetName("error",
+        let assetName = UIColor.assetName("errorView",
                                           theme: theme)
-        return UIColor(named: assetName) ?? .blue
+        return UIColor(named: assetName) ?? .darkGray
     }
     
     static func numberForegroundColor(theme: Theme) -> UIColor {
