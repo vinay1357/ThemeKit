@@ -8,6 +8,12 @@ public enum Theme {
 }
 
 public extension Theme {
+    
+    var screenTextColor: Color {
+        let uiColor = UIColor.screenTextColor(theme: self)
+        return Color(uiColor: uiColor)
+    }
+    
     var numberBackgroundColor: Color {
         let uiColor = UIColor.numberBackgroundColor(theme: self)
         return Color(uiColor: uiColor)
@@ -72,6 +78,12 @@ extension UIColor {
     
     static func operationForegroundColor(theme: Theme) -> UIColor {
         let assetName = UIColor.assetName("operationForegroundColor",
+                                          theme: theme)
+        return UIColor(named: assetName, in: .module, compatibleWith: nil) ?? .white
+    }
+    
+    static func screenTextColor(theme: Theme) -> UIColor {
+        let assetName = UIColor.assetName("screenTextColor",
                                           theme: theme)
         return UIColor(named: assetName, in: .module, compatibleWith: nil) ?? .white
     }
